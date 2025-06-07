@@ -41,6 +41,9 @@ selected_school = st.sidebar.multiselect("Pilih Sekolah:", options=df["school"].
 
 filtered_df = df[(df["sex"].isin(selected_gender)) & (df["school"].isin(selected_school))]
 
+
+
+
 # Sidebar - Team Info
 st.sidebar.markdown("""
 *Created By:*  
