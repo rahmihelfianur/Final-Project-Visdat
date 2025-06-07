@@ -11,10 +11,7 @@ st.title("Kesuksesan Akademik: Lebih dari Sekadar Jam Belajar")
 
 st.markdown("""
 Kesuksesan siswa dibentuk oleh latar belakang keluarga, dukungan sosial, gaya hidup, dan hubungan personal—bukan hanya dari seberapa lama mereka belajar.""")
-st.markdown("""
-Nadia Astria Savitri - 203012310012
 
-Rachmi Helfianur - 2301222048""")
 
 # Load data
 @st.cache_data
@@ -27,6 +24,13 @@ def load_datasets():
     return mat, por, combined
 
 df_mat, df_por, df_all = load_datasets()
+
+# Sidebar - Team Info
+st.sidebar.markdown("""
+**Created By:**  
+Nadia Astria Savitri - 203012310012  
+Rachmi Helfianur - 2301222048
+""")
 
 # Sidebar Select Dataset
 st.sidebar.header("Dataset")
