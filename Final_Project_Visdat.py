@@ -24,6 +24,13 @@ def load_datasets():
 
 df_mat, df_por, df_all = load_datasets()
 
+# Sidebar - Team Info
+st.sidebar.markdown("""
+*Created By:*  
+Nadia Astria Savitri - 203012310012  
+Rachmi Helfianur - 2301222048
+""")
+
 # Sidebar Select Dataset
 st.sidebar.header("Dataset")
 dataset_option = st.sidebar.selectbox("Select Dataset", options=["All", "Math", "Portuguese"])
