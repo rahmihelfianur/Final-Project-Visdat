@@ -24,6 +24,13 @@ def load_datasets():
 
 df_mat, df_por, df_all = load_datasets()
 
+# Sidebar - Team Info
+st.sidebar.markdown("""
+*Created By:*  
+Nadia Astria Savitri - 203012310012  
+Rachmi Helfianur - 2301222048
+""")
+
 # Sidebar Select Dataset
 st.sidebar.header("Dataset")
 dataset_option = st.sidebar.selectbox("Select Dataset", options=["All", "Math", "Portuguese"])
@@ -40,17 +47,6 @@ selected_gender = st.sidebar.multiselect("Pilih Gender:", options=df["sex"].uniq
 selected_school = st.sidebar.multiselect("Pilih Sekolah:", options=df["school"].unique(), default=df["school"].unique())
 
 filtered_df = df[(df["sex"].isin(selected_gender)) & (df["school"].isin(selected_school))]
-
-
-
-
-# Sidebar - Team Info
-st.sidebar.markdown("""
-*Created By:*  
-Nadia Astria Savitri - 203012310012  
-Rachmi Helfianur - 2301222048
-""")
-
 
 # Preview Dataset
 with st.expander("Preview Dataset"):
